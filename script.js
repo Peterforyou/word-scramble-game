@@ -1,3 +1,4 @@
+
 const wordEl = document.getElementById('word-scramble');
 const hintEl = document.querySelector('#hint span');
 const timeEl = document.querySelector('#time span');
@@ -5,8 +6,9 @@ const inputEl = document.getElementById('input-word');
 const refreshEl = document.getElementById('refresh');
 const checkEl = document.getElementById('check');
 
+
 let word = '';
-let time = 10 + 's';
+let time = 10;
 let timer;
 
 function initGame () {
@@ -18,7 +20,7 @@ function initGame () {
     let wordArry = word.split('').sort( () => Math.random() - 0.5);
     // console.log(wordArry)
     let scrambledWord = wordArry.join('');
-    console.log(scrambledWord)
+    // console.log(scrambledWord)
 
     if (scrambledWord === word) {
         return initGame();
@@ -33,14 +35,15 @@ function initGame () {
     timer = setInterval(() => {
         if (time > 0) {
             time--
-            return timeEl.textContent = time + 's';
+            return timeEl.textContent = time;
         }
-        timeOut(`Time out! ${word.toUpperCase()} is a correct word`)
+        timeOut(`Time out! ${word.toUpperCase()} is the correct word`)
     },1000);
-    console.log(timer)
+    // console.log(timer)
 }
 
 initGame()
+
 
 refreshEl.addEventListener('click', () => {
     timeOut();
@@ -55,7 +58,7 @@ function refreshGame (msg) {
     initGame()
 }
 
-function timeOut (msg) {
+function timeOut(msg) {
     refreshGame(msg);
 }
 
@@ -74,7 +77,9 @@ function checkWord (){
     if (inputEl.value !== word) {
         alert(`${inputEl.value.toUpperCase()} is not the correct word`)
     }  else {
-        alert('Wowhh! you got it correctly!')
+        alert('Wowhh!... you got it correctly!')
         timeOut()
     }
+    // console.log(inputEl)
 }
+
