@@ -6,7 +6,7 @@ const refreshEl = document.getElementById('refresh');
 const checkEl = document.getElementById('check');
 
 let word = '';
-let time = 10;
+let time = 10 + 's';
 let timer;
 
 function initGame () {
@@ -33,7 +33,7 @@ function initGame () {
     timer = setInterval(() => {
         if (time > 0) {
             time--
-            return timeEl.textContent = time;
+            return timeEl.textContent = time + 's';
         }
         timeOut(`Time out! ${word.toUpperCase()} is a correct word`)
     },1000);
@@ -71,10 +71,10 @@ checkEl.addEventListener('click', () => {
  })
 function checkWord (){
     
-    if (inputEl.value === word) {
+    if (inputEl.value !== word) {
+        alert(`${inputEl.value.toUpperCase()} is not the correct word`)
+    }  else {
         alert('Wowhh! you got it correctly!')
         timeOut()
-    }  else {
-        alert(`${inputEl.value.toUpperCase()} is not the correct word`)
     }
 }
