@@ -61,10 +61,6 @@ function refreshGame (msg) {
 function timeOut(msg) {
     refreshGame(msg);
 }
-
-checkEl.addEventListener('click', () => {
-    checkWord();
-})
  inputEl.addEventListener ('input', (e) => {
     if (!e.target.value) {
         checkEl.setAttribute('disabled', true)
@@ -73,8 +69,8 @@ checkEl.addEventListener('click', () => {
     }
  })
 function checkWord (){
-    
-    if (inputEl.value !== word) {
+    let endInput = inputEl.value.toLowerCase();
+    if (endInput !== word) {
         alert(`${inputEl.value.toUpperCase()} is not the correct word`)
     }  else {
         alert('Wowhh!... you got it correctly!')
@@ -82,4 +78,6 @@ function checkWord (){
     }
     // console.log(inputEl)
 }
-
+checkEl.addEventListener('click', () => {
+    checkWord();
+})
