@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="./mobile.css">
+    <title>Word_Scramble_Game</title>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <h1 id="header">Word Scramble</h1>
+            <hr>
+            <div>
+                <h1 id="word-scramble">library</h1>
+                <div id="hint-cover">
+                    <p id="hint">Hint: <span>Place containing collection of books</span></p>
+                    <p id="time">Time Left: <span>10s</span></p>
+                </div>
+                <div id="input-cover">
+                    <input type="text" id="input-word" placeholder="Enter a valid word">
+                    <div id="button-cover">
+                        <button id="refresh">Refresh word</button>
+                        <button id="check">Check word</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="./data.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
