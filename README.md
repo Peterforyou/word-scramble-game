@@ -20,7 +20,7 @@ This is a word scramble game where users gets to enter the correct word which is
 
 ### Links
 
-- Live Site URL:(https://peterforyou.github.io/passenger-counter-app/)
+- Live Site URL:(https://peterforyou.github.io/word-scramble-game/)
 
 ### Built with
 
